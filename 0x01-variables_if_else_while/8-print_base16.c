@@ -8,14 +8,16 @@
 */
 int main(void)
 {
-char c;
-for (c = 'a' ; c <= '9' ; c++)
+int num;
+char alpha;
+
+for (num = 0 ;num < 10; num++)
 {
-	putchar(c);
+	putchar((num % 10) + '0');
 }
-for (c = 'a' ; c <= 'f' ; c++)
+for (alpha = 'a' ; alpha <= 'f' ; alpha++)
 {
-	putchar(c);
+	putchar(alpha);
 }
 putchar('\n');
 return (0);
