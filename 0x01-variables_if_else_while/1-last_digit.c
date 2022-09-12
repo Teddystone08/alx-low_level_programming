@@ -3,8 +3,9 @@
 #include <stdlib.h>
 /**
 * main - Last digit of a variable
-* 
-* Description:This program is to print the last digit 
+*
+* Description:This program is to print the last digit
+*
 * of the number stored in the variable n
 *
 * Return: always 0 (Success)
@@ -21,15 +22,14 @@ int main(void)
 
 	if (l > 5)
 	{
-		printf("last digit of %d and is greater than 5\n", n, l);
+		printf("Last digit of %d and is greater than 5\n", n, l);
 	}
 	else if (l == 0)
 	{
-		printf("last digit of %d is %d and is 0\n", n, l);
+		printf("Last digit of %d is %d and is 0\n", n, l);
 	}
-	else 
+	else
 	{
-		printf("last digit of %d is %d and less than 6 and not 0\n", n, l);
+		printf("Last digit of %d is %d and less than 6 and not 0\n", n, l);
 	}
-
 }
