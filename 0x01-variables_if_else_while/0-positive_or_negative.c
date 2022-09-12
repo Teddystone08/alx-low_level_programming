@@ -6,7 +6,7 @@
 *Description: using the main function
 *print variable n is zero, positive_ or_ negaive.
 *
-* return 0
+* Return: Always 0 (Success)
 */
 int main(void)
 {
