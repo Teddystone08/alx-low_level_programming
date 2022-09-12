@@ -18,6 +18,6 @@ if (a != 57)
 	putchar(' ');
 }
 }
-putchar('/n');
+putchar('\n');
 return(0);
 }
