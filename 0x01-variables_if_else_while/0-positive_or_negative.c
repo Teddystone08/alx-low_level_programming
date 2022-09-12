@@ -4,7 +4,7 @@
 /**
 *main -print if number is zero, positive or negaive
 *Description: using the main function
-this program print whether the number stored in the variable n is zero, positive or *negaive.
+*print variable n is zero, positive or negaive.
 *
 * return 0
 */
@@ -15,7 +15,7 @@ int main(void)
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
 	/* code goes there */
-	if(n > 0){
+	if(n >= 0){
 		printf("%i is positive \n", n);
 	}
 	else if(n < 0)
