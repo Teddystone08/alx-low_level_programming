@@ -2,9 +2,9 @@
 #include <stdlib.h>
 #include <time.h>
 /**
-*main -print if number is zero, positive or negaive
+*main - print if number is zero, positive_ or_ negaive
 *Description: using the main function
-*print variable n is zero, positive or negaive.
+*print variable n is zero, positive_ or_ negaive.
 *
 * return 0
 */
