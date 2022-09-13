@@ -8,20 +8,24 @@
 */
 int main(void)
 {
-int num1, num2;
-for (num1 = 0 ; num1 <= 10 ; num1++)
+int i;
+int j;
+
+for (i = 0 ; i <= 10 ; 1++)
 {
-for (num2 = 0 ; num2 < 10 ; num2++)
+for (j = 0 ; j < 10 ; j++)
 {
 putchar(num1 + '0');
 putchar(num2 + '0');
 
-if (num1 == 9 && num2 == 9);
+if (i == 9 && j == 9)
+{
 break ;
 }
 
 putchar(',');
 putchar(' ');
+}
 }
 putchar('\n')
 return (0);
