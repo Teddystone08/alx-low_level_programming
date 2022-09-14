@@ -1,17 +1,21 @@
 #include "main.h"
-#include "putchar.h"
+#include "_putchar.h"
 /**
-*main - print the string  "putchar"
-*Return: 0 (Success)
+* main - print putchar
+*
+*Description: out oof the main. print putchar
+*
+*Return: void
 */
 int main(void)
 {
-chat c[] = "putchar";
-int i;
-
-for (i = 0; i < 9; i++)
+char c[10] = "_putchar";
+int i = 0;
+while (i < 9)
 {
-	_putchar(c[i]);
+_putchar(c[i]);
+i++;
 }
 _putchar('\n');
 return (0);
+}
