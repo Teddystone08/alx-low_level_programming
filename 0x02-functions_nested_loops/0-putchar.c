@@ -1,4 +1,4 @@
-
+#include <main.h>
 #include "putchar.h"
 /**
 *main - print the string  "putchar"
