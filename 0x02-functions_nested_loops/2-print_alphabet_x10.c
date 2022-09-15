@@ -11,7 +11,7 @@
 int print_alphabet_x10(void)
 {
 	int j, ch;
-	ch = 0;
+	ch = 'a';
 
 	while (ch < 10)
 	{
