@@ -1,18 +1,16 @@
-#include <stdio.h>                                                                                  
+#include "main.h"
 
-/**                                                                                                 
- * main - debugging example                                                                         
- * Return: 0                                                                                        
- */                                                                                                 
-int main(void)                                                                                      
-{                                                                                                   
-        char *hello = "Hello, World!";                                                              
+/**
+* main - tests function that prints if integer is positive or negative
+* Return: 0
+*/
 
-        for (i = 0; hello[i] != '\0'; i++)                                                          
-        {                                                                                           
-                printf("%c", hello[i]);                                                             
-        }                                                                                           
+int main(void)
+{
+        int i;
 
-        printf("\n");                                                                               
+        i = 98;
+        positive_or_negative(i);
 
-        return (0);                                                                                 
+        return (0);
+}                                                                                 
