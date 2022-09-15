@@ -1,5 +1,4 @@
 #include "main.h"
-#include "_putchar.h"
 /**
 * main - print putchar
 *
@@ -9,12 +8,13 @@
 */
 int main(void)
 {
-char c[10] = "_putchar";
-int i = 0;
-while (i < 9)
+char func[10] = "_putchar";
+int count  = 0;
+int arrlen = sizeof(func) / sizeof(*func);
+while (count < arrlen)
 {
-_putchar(c[i]);
-i++;
+_putchar(func[count]);
+count++;
 }
 _putchar('\n');
 return (0);
