@@ -8,7 +8,7 @@
 */
 int main(void)
 {
-char func[10] = "_putchar";
+char func[8] = "_putchar";
 int count  = 0;
 int arrlen = sizeof(func) / sizeof(*func);
 while (count < arrlen)
