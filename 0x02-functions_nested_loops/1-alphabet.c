@@ -2,12 +2,12 @@
 /**
  * alphabet - print in lowcase
  *
- * Description: from the main.h print in lower cases
+ * Description: @ val from the main.h print in lower cases
  *
  * Return: always 0
  *
  */
-int print_alphabet(void)
+int print_alphabet(void val)
 {
 	char alpha = 'a';
 
