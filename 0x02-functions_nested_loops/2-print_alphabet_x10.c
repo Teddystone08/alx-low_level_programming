@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * alphabet - print in lowcase
+ * print_alphabet_x10 - print in lowcase
  *
  * Description: @ val from the main.h print in lower cases
  *
@@ -8,19 +8,19 @@
  *
  */
 
-int print_alphabet_x10(void)
+void print_alphabet_x10(void)
 {
-	int j, ch;
-	ch = 0;
+	int ch = 0;
 
 	while (ch < 10)
 	{
-	for (j = 'a'; j <= 'z'; j--)
-	{
-		_putchar(ch);
-	}
-	ch++;
-	_putchar('\n');
-	}
-	return (0);
+		int j;
+
+		while (j >= 'a' && j <= 'z')
+		{
+			_putchar(ch);
+		}
+		ch++;
+		_putchar('\n');
+		}
 }
