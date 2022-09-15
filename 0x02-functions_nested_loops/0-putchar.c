@@ -2,7 +2,7 @@
 /**
 * main - print putchar
 *
-*Description: out oof the main. print putchar
+*Description: out oof the main print putchar
 *
 *Return: void
 */

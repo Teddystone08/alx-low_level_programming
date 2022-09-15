@@ -2,6 +2,8 @@
 /**
  * alphabet - print in lowcase
  *
+ * Description: from the main.h print in lower cases
+ *
  * Return: always 0
  *
  */
