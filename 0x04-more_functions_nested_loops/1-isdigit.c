@@ -2,17 +2,17 @@
 #include "main.h"
 
 /**
- * _isupper - function that checks for uppercase characters
+ * _isdigit - input
  *
- * Description: Print the alphabet with putchar
+ * Description: define if a character is a number
  * @c: charater
- * Return: 0
+ * Return: 1 yes 0 no
  *
  */
 
-int _isupper(int c)
+int _sdigit(int c)
 {
-	if (c >= 'A' && c <= 'Z')
+	if (c >= '0' && c <= '9')
 	{
 		return (1);
 	}
