@@ -12,10 +12,17 @@ void print_most_numbers(void)
 {
 	int count;
 
-	if (count != 2 && count != 4)
+	char val;
+	while (count < 10 )
 	{
-		putchar(count);
-			count++;
+		if (count != '2' && count != '4')
+		{
+			_putchar(val);
+			count++
+		}
+		_putchar('\n');
 	}
-	putchar('\n')
+
+
+	
 }
