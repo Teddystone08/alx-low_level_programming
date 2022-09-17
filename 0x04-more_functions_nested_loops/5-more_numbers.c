@@ -1,13 +1,13 @@
 #include "main.h"
 #include <stdio.h>
 /**
- * more_numbers - emtry point
+ * more_numbers - entry point
  *
  * Description: print numbers with _putchar
  * Return: void
  */
 
-void more_numbrs(void)
+void more_numbers(void)
 {
 	int n1, n2;
 
