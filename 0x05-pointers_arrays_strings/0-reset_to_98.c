@@ -1,5 +1,5 @@
 #include "main.h"
-
+#include <stdio.h>
 /**
  * reset_to_98 - to reset a given variable to 98
  * @n: parameters
