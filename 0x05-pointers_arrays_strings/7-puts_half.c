@@ -4,7 +4,7 @@
  * puts_half - prints half of string
  *
  * @str: input string.
- * Return: no return
+ * Return: void
  */
 void puts_half(char *str)
 {
@@ -13,22 +13,21 @@ void puts_half(char *str)
 	while (count >= 0)
 	{
 		if (str[count] == '\0')
-		{
+	
 			break;
-		}
 		count++;
 	}
+
 	if (count % 2 == 1)
-	{
+	
 		i == count / 2;
-	}
+	
 	else
 		i = (count - 1) / 2;
 
 	for (i++; i < count; 1++)
-	{
+	
 		_putchar(str[i]);
-	}
-
+	
 	_putchar('\n);
 }
