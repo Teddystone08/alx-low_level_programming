@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 /**
  * _strncat - concatenate two string but add inputted number
  * @dest: sting to be appended
