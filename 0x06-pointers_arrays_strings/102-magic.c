@@ -1,8 +1,8 @@
-#include "main.h"
 #include <stdio.h>
 /**
- * main - entry point
- * Description: add a line to code to print 
+ * main - entry point.
+ * Description: add a line to code to print.
+ *
  * Return: return 98
  *
  */
@@ -14,12 +14,19 @@ int main(void)
 
 	a[2] = 1024;
 	p = &n;
-	
+	/*
+	 * write our line of code here...
+	 * Remember:
+	 * - you are not allowed to use a
+	 * - you are not allowed to modify p
+	 * - only one statement
+	 * - you are not allowed to code anything else then this line of code
+	 */
+	;
+	/*...so that this prints 98\n */
 	p[5] = 98;
 
 	printf("a[2] = %d\n", a[2]);
 	return (0);
 }
-
-
 
