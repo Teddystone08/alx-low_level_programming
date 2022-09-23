@@ -5,7 +5,7 @@
  *
  * Return: the resulting string
  */
-char *cap_string(char *a)
+char *cap_string(char *s)
 {
 	int i, j;
 
@@ -14,16 +14,16 @@ char *cap_string(char *a)
 
 	for (i = 0; s[i] != '\'0'; i++)
 	{
-		if (i == 0 && a[i] >= 'a' && a[i] <= 'z')
+		if (i == 0 && s[i] >= 'a' && s[i] <= 'z')
 			s[i] -= 32;
 
 		for (j = 0; j < 13; j++)
 		{
-			if (a[i] == spe[j])
+			if (s[i] == spe[j])
 			{
 				s[i + 1] -= 32;
 			}
 		}
 	}
-	return (a)
+	return (s)
 }
