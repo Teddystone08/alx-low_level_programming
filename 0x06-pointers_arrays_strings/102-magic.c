@@ -1,6 +1,7 @@
 #include <stdio.h>
 /**
  * main - entry point.
+ *
  * Description: add a line to code to print.
  *
  * Return: return 98
@@ -22,7 +23,7 @@ int main(void)
 	 * - only one statement
 	 * - you are not allowed to code anything else then this line of code
 	 */
-	*p[5] = 98;
+	*(p + 5) = 98;
 	/*...so that this prints 98\n */
 	printf("a[2] = %d\n", a[2]);
 	return (0);
