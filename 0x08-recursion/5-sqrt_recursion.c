@@ -20,7 +20,7 @@ int sqrt2(int c, int d)
 }
 
 /**
- * _sqr_recursion - return a natural square root
+ * _sqrt_recursion - return a natural square root
  * @n: integer
  * Return: on success
  */
