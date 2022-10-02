@@ -1,8 +1,6 @@
 #include "main.h"
 /**
- * is_prime_number - check is a number is prime
  * prime2 - evatuate from 1 to n
- * @n: number integer
  * @a: as n
  * @b: iterates number from 1 to n
  * Return: on succes
@@ -20,6 +18,11 @@ int prime2(int a, int b)
 	return (prime2(a, b + 1));
 }
 
+/**
+ * is_prime_number - check is a number is prime
+ * @n: number integer
+ * Return: On success
+ */
 
 int is_prime_number(int n)
 {
