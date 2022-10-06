@@ -1,9 +1,24 @@
 #include "main.h"
 #include <stdlib.h>
 /**
- * _strlen - get string lenght
- * @string: string
- * Return: length 
+ * _calloc - allocate memory for array
+ * @nmemb: number of elements in the array
+ * @size: size in bytes of the element
+ * Return: allocated memory
+ *
  *
  */
+void *_calloc(unsigned int nmenb, unsigned int size)
+{
+	char *p;
+	unsigned int i;
 
+	if (nmemb == 0 || size == 0)
+		return (NULL);
+	p = malloc(nmemb * size);
+	if (p == NULL)
+		return (NULL);
+	for (i = 0; i < (nmemb * size); i++)
+		p[i] = 0;
+	return (p);
+}
