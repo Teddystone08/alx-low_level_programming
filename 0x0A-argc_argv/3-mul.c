@@ -8,20 +8,25 @@
 int main(int argc, char *argv[])
 {
 	int i, j;
+	int total = 0;
 
-	if (argc == 1 || argc == 2)
+	if (argc <= 1 || argc > 2)
 	{
 		printf("Error\n");
 		return (1);
 	}
-	else
+	for (i = 1; i < argc; i++)
 	{
-		j = 1;
-		for (i = 1; i < 3; i++)
+		for (j = 0; argv[i][j] != '\0'; j++)
 		{
-			j *= atoi(argv[i]);
+			if (isdigit(argv[i][j] == 0 && argv[i][j] != '-')
+			{
+				printf("Error\n");
+				return (i);
+			}
 		}
-		printf("%d\n", j);
 	}
-	return (0);
+	total += atoi(argv[1] * atoi(argv[2]);
+		printf("%d\n", total);
+		return (0);
 }
