@@ -19,7 +19,7 @@ int op_add(int a, int b)
  */
 int op_sub(int a, int b)
 {
-	return (a - b)
+	return (a - b);
 }
 /**
  * op_mul - multiply two numbers
@@ -27,7 +27,7 @@ int op_sub(int a, int b)
  * @b: second number
  * Return: result multiply
  */
-int op_mul(inta, int b)
+int op_mul(int a, int b)
 {
 	return (a * b);
 }
