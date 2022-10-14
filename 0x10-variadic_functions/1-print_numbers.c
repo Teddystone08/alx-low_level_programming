@@ -6,6 +6,7 @@
  * @separator: string to be printed between numbers
  * @n: integers passed on the function
  * @...: numbers to be printed
+ * Return: always 0
  *
  */
 void print_numbers(const char *separator, const unsigned int n, ...)
