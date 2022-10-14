@@ -12,7 +12,7 @@ void op_c(va_list form)
 }
 
 /**
- * op_1 - print integer
+ * op_i - print integer
  * @form: name va_list
  *
  * Return: nothing
@@ -56,6 +56,10 @@ void op_s(va_list form)
 /**
  * print_all - check code
  * @format: number of argument passed to function
+ * @c: function char
+ * @i: function integer
+ * @f: float
+ * @s: char
  *
  * Return: nothing
  */
