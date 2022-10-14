@@ -4,6 +4,7 @@
 /**
  * op_c - print character
  * @form: name va_list
+ * @c: string
  * Return: nothing
  */
 void op_c(va_list form)
@@ -14,6 +15,7 @@ void op_c(va_list form)
 /**
  * op_i - print integer
  * @form: name va_list
+ * @i: string
  *
  * Return: nothing
  */
@@ -26,6 +28,7 @@ void op_i(va_list form)
 /**
  * op_f - print float numbers
  * @form: name of va_list
+ * @f: string
  *
  * Return: nothing
  */
@@ -36,6 +39,7 @@ void op_f(va_list form)
 /**
  * op_s - print string
  * @form: name v_list
+ * @s: string
  *
  * Return: nothing
  */
@@ -56,11 +60,7 @@ void op_s(va_list form)
 /**
  * print_all - check code
  * @format: number of argument passed to function
- * @c: function char
- * @i: function integer
- * @f: float
- * @s: char
- *
+ * @...: array
  * Return: nothing
  */
 
