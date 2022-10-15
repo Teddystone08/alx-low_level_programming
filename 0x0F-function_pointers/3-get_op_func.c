@@ -1,6 +1,6 @@
 #include "3-calc.h"
 /**
- * get_op_fun - get the operator and redirect to function
+ * get_op_func - get the operator and redirect to function
  * @s: the operator
  * Return: null or function to do
  */
