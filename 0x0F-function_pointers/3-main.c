@@ -1,5 +1,5 @@
 #include "3-calc.h"
-#include <stdlib>
+#include <stdlib.h>
 #include <stdio.h>
 
 /**
@@ -20,13 +20,13 @@ int main(int argc, char *argv[])
 		exit(98);
 	}
 
-	oprt = get_op_fun(argv[2]);
+	oprt = get_op_func(argv[2]);
 
 	if (!oprt)
 	{
 		printf("Error\n");
 		exit(99);
 	}
-	printf("%d\n", oprt(atoi(argv[i]), atoi(argv[3])));
+	printf("%d\n", oprt(atoi(argv[1]), atoi(argv[3])));
 	return (0);
 }
