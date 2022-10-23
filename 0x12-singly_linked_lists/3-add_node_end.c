@@ -1,9 +1,9 @@
 #include "lists.h"
 
 /**
- * add_nodeint_end - adds a new node at the end of linked list
+ * add_node_end - adds a new node at the end of linked list
  * @head: head of linked list
- * @n: integer
+ * @str: integer
  * Return: address of new element or NULL if it fails
  */
 
