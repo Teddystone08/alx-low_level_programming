@@ -1,3 +1,8 @@
+/**
+ @msg: message
+ @fmt: function to format
+*/
+
 SECTION .data
 msg:	db "hello, Holberton", 0
 fmt:	db "%s", 10, 0
