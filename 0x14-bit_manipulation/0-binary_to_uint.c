@@ -8,24 +8,18 @@
  */
 unsigned int binary_to_uint(const char *b)
 {
-	unsigned int sum = 0;
 	unsigned int power = 1;
-	int i = 0;
+	int i;
 
 	if (!b)
 		return (0);
 
-	while (b[i])
-		i++;
-	i--;
-	while (i >= 0)
+	for (i = 0; (b[i]; i++)
 	{
-		if (b[i] != '0' && b[i] != '1')
+		if (b[i]  < '0' || b[i] > 0)
 			return (0);
-		if (b[i] == '1')
-			sum += power;
-		i--;
-		power += power;
+
+			power = 2 * power + (b[i] - '0');
 	}
 
 	return (sum);
