@@ -1,4 +1,4 @@
-# include "main.h"
+#include "main.h"
 /**
  * read_textfile - read a text file and prints it to the posix std io
  * @letters: number of letters it should read and print
