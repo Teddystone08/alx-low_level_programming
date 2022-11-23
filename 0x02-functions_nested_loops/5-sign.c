@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * print_signi - function nested loops
+ * print_sign - function nested loops
  *
  * Description: print out sign of numbers
  *
