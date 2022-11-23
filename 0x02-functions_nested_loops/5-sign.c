@@ -1,7 +1,7 @@
 #include "main.h"
 /**
  * print_sign - function nested loops
- *
+ * @n: character of numbers and signs
  * Description: print out sign of numbers
  *
  * Return: void
