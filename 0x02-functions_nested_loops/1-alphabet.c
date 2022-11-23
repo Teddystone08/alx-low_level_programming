@@ -7,15 +7,14 @@
  * Return: always 0
  *
  */
-int print_alphabet(void)
-{
-	char alpha = 'a';
 
-	while (alpha <= 'z')
+void print_alphabet(void)
+{
+	int n;
+
+	for (n = 'a'; n <= 'z'; n++)
 	{
-		_putchar(alpha);
-		alpha++;
+		_putchar(n);
 	}
 	_putchar('\n');
-	return (0);
 }
