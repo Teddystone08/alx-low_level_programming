@@ -8,24 +8,31 @@
 */
 int main(void)
 {
-int i;
-int j;
+	int i = '0';
+	int j = '0';
 
-for (i = 0 ; i <= 10 ; 1++)
-{
-for (j = 0 ; j < 10 ; j++)
-{
-putchar(num1 + '0');
-putchar(num2 + '0');
-
-if (i == 9 && j == 9)
-{
-break ;
+	while (i <= '9')
+	{
+		while (j <= '9')
+		{
+			if (!(i > j || i == j))
+			{
+				putchar(i);
+				putchar(j);
+				if (i == '8' && j == '9')
+				{
+					putchar('\n');
+				}
+				else
+				{
+					putchar(',');
+					putchar(' ');
+				}
+			}
+			j++;
+		}
+		j = '0';
+		i++;
+	}
+	return (0);
 }
-
-putchar(',');
-putchar(' ');
-}
-}
-putchar('\n')
-return (0);
