@@ -8,15 +8,20 @@
 */
 int main(void)
 {
-char ch;
-for (ch = 'a' ; ch <= 'z' ; ch++)
-{
-	putchar(ch);
+	char c = 'a';
+	char d = 'A';
 
-for (ch = 'A' ; ch <= 'Z' ; ch++)
-{
-	putchar(ch);
+	while (c <= 'z')
+	{
+		putchar(c);
+		c++;
+	}
+	while (d <= 'Z')
+	{
+		putchar(d);
+		d++;
+	}
+	putchar('\n');
+	return (0);
+
 }
-putchar('\n');
-return (0);
-
