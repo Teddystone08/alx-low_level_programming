@@ -15,7 +15,7 @@ clean:
 .PHONY: oclean
 
 oclean:
-	%(RM) $(OBJ)
+	$(RM) $(OBJ)
 
 PHONY: fclean
 
