@@ -1,5 +1,6 @@
-#include "hash_tables.h"/**
- * hash_table_delete:function to delete hash table
+#include "hash_tables.h"
+/**
+ * hash_table_delete - hash table delete function
  * @ht: hash table to be deleted
  * Return: void
  */
