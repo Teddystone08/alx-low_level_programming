@@ -2,7 +2,7 @@
 
 /**
  * hash_table_get - function is to get the value of a key
- * @ht: hash table to look 
+ * @ht: hash table to look
  * @key: key looking for
  * Return: key or NULL
  */
