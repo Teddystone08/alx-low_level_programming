@@ -54,7 +54,7 @@ int main(int argc, char **argv)
 		_err(98, argv[1]);
 	if (argv[2] == NULL)
 		_err(99, argv[2]);
-	input = open(argv[1], O_RDONLY);
+	put = open(argv[1], O_RDONLY);
 	if (put == -1)
 		_err(98, argv[1]);
 	out = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
