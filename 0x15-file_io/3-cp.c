@@ -1,103 +1,84 @@
 #include "main.h"
 
-char *buff(char *file);
-void close_file(int fd);
-
 /**
- * buff - Allocates 1024 bytes for a buffer.
- * @file: The name of the file buffer is storing chars for.
- *
- * Return: A pointer to the newly-allocated buffer.
+ * _err - function to check for error code
+ * @stat: error code to be checked
+ * Return: void
  */
-char *buff(char *file)
+void _err(int stat, ...)
 {
-	char *buff;
+	va_list list;
 
-	buff = malloc(sizeof(char) * 1024);
-
-	if (buff == NULL)
+	va_start(list, stat);
+	if (stat == 97)
 	{
-		dprintf(STDERR_FILENO,
-			"Error: Can't write to %s\n", file);
+		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
+		exit(97);
+	}
+	else if (stat == 98)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't read from file ");
+		dprintf(STDERR_FILENO, "%s\n", va_arg(list, char *));
+		exit(98);
+	}
+	else if (stat == 99)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't write to ");
+		dprintf(STDERR_FILENO, "%s\n", va_arg(list, char *));
 		exit(99);
 	}
-
-	return (buff);
-}
-
-/**
- * close_file - Closes file descriptors.
- * @fd: The file descriptor to be closed.
- */
-
-void close_file(int fd)
-{
-	int c;
-
-	c = close(fd);
-
-	if (c == -1)
-{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
+	else
+	{
+		dprintf(STDERR_FILENO, "Error: Can't close fd ");
+		dprintf(STDERR_FILENO, "%d\n", va_arg(list, int));
 		exit(100);
-}
+	}
+	va_end(list);
 }
 
 /**
- * main - Copies the contents of a file to another file.
- * @argc: The number of arguments supplied to the program.
- * @argv: An array of pointers to the arguments.
+ * main - main function entry point
+ * @argc: number of arguments passed
+ * @argv: arguments being passed
+ * Return: 98 read err, 99 write err, 100 close err, 0 sucess
  *
- * Return: 0 on success.
- *
- * Description: If the argument count is incorrect - exit code 97.
- * If file_from does not exist or cannot be read - exit code 98.
- * If file_to cannot be created or written to - exit code 99.
- * If file_to or file_from cannot be closed - exit code 100.
  */
-
-int main(int argc, char *argv[])
+int main(int argc, char **argv)
 {
-	int from, to, r, w;
+	int put, out, put_r, put_w;
 	char *buff;
 
 	if (argc != 3)
-{
-		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
-		exit(97);
-}
-
-	buffer = create_buffer(argv[2]);
-	from = open(argv[1], O_RDONLY);
-	r = read(from, buff, 1024);
-	to = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
-
-	do {
-		if (from == -1 || r == -1)
-		 {
-			dprintf(STDERR_FILENO,
-				"Error: Can't read from file %s\n", argv[1]);
-			free(buff);
-			exit(98);
-		 }
-
-		w = write(to, buff, r);
-		if (to == -1 || w == -1)
-		{
-			dprintf(STDERR_FILENO,
-				"Error: Can't write to %s\n", argv[2]);
-			free(buffer);
-			exit(99);
-		}
-
-		r = read(from, buff, 1024);
-		to = open(argv[2], O_WRONLY | O_APPEND);
-
-	  } while (r > 0);
-
+		_err(97);
+	if (argv[1] == NULL)
+		_err(98, argv[1]);
+	if (argv[2] == NULL)
+		_err(99, argv[2]);
+	input = open(argv[1], O_RDONLY);
+	if (put == -1)
+		_err(98, argv[1]);
+	out = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
+	if (out == -1)
+		_err(99, argv[2]);
+	buff = malloc(BUFFSIZE * sizeof(char));
+	if (buff == NULL)
+		return (1);
+	put_r = read(input, buff, BUFFSIZE);
+	if (put_r == -1)
+		_err(98, argv[1]);
+	while (put_r > 0)
+	{
+		out_w = write(out, buff, put_r);
+		if (out_w == -1)
+			_err(99, argv[2]);
+		put_r = read(put, buff, BUFFSIZE);
+		if (put_r == -1)
+			_err(98, argv[1]);
+	}
+	if (close(put) == -1)
+		_err(100, put);
+	if (close(out) == -1)
+		_err(100, out);
 	free(buff);
-	close_file(from);
-	close_file(to);
-
 	return (0);
 }
