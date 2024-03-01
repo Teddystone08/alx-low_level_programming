@@ -12,14 +12,14 @@ unsigned int binary_to_uint(const char *b)
 	unsigned int result = 0;
 	int s  = 0, j = 0;
 
-	if (b == NULL || *b != '0' && *b != '1')
+	if (b == NULL || (*b != '0' && *b != '1'))
 		return (0);
 	for (s = 0; b[s] != '\0'; s++)
 		;
 	s--;
 	while (s >= 0)
 	{
-		if ([s] != '0' && b[s] != '1')
+		if (b[s] != '0' && b[s] != '1')
 			return (0);
 		result = result + (b[s] - '0') * (1 << j);
 		s--;
