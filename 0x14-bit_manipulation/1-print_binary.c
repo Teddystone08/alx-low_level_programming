@@ -2,26 +2,22 @@
 
 /**
  * print_binary - prints binary representation of a number.
- * @n: num
+ * @n: num to be printed
  * Return: void
  *
  */
 
 void print_binary(unsigned long int n)
 {
-	char c;
-
 	if (n == 0)
 	{
-		_putchar('0');
+		putchar('0');
 		return;
 	}
-	if (n == 1)
+
+	while (n > 0)
 	{
-		_putchar('1');
-		return;
+		putchar('0' + (n & 1));
+		n >>= 1;
 	}
-	print_binary(n >> 1);
-	c = (n & 1) ? '1' : '0';
-	_putchar(c);
 }
