@@ -7,20 +7,21 @@
  */
 unsigned int binary_to_uint(const char *b)
 {
-	unsigned int fig;
+	unsigned int count = 0;
+	int x = 0, d = 0;
 
-	i = 0;
-	if (b == NULL)
+	if (b == NULL || (*b != '0' && *b != '1'))
 		return (0);
-
-	while (b[i] != '\0')
+	for (x = 0; b[x] != '\0'; x++)
+		;
+	x--;
+	while (x >= 0)
 	{
-		if (b[i] != '0' && b[i] != '1')
+		if (b[x] != '0' && b[x] != '1')
 			return (0);
-		fig = fig << 1;
-		if (b[i] == '1')
-			fig = fig + 1;
-		i++;
+		count += (b[x] - '0') * (1 << d);
+		x--;
+		d++;
 	}
-	return (fig);
+	return (count);
 }
