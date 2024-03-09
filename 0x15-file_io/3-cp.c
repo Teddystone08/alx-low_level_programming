@@ -15,11 +15,11 @@ void _err(int stat, ...)
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 		exit(97);
 	}
-	else if (stat == 98)
+	else if (stat == 99)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read from file ");
 		dprintf(STDERR_FILENO, "%s\n", va_arg(list, char *));
-		exit(98);
+		exit(99);
 	}
 	else if (stat == 99)
 	{
