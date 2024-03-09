@@ -9,15 +9,30 @@
 
 void print_binary(unsigned long int n)
 {
-	if (n == 0)
+	unsigned long int s = 0;
+	unsigned long int k = 0;
+
+	while (s <= n && k < 62)
 	{
-		putchar('0');
-		return;
+		s = s << 1;
+		k++;
 	}
 
-	while (n > 0)
+	if (k != 62)
+		s = s >> 1;
+
+	while (s != 0)
 	{
-		putchar('0' + (n & 1));
-		n >>= 1;
+		if ((s & n) != 0)
+		{
+			k++;
+			_putchar('1');
+		}
+		else
+		{
+			k++;
+			_putchar('0');
+		}
+		s = s >> 1;
 	}
 }
