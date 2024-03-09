@@ -7,45 +7,21 @@
 unsigned int binary_to_uint(const char *b)
 {
 	unsigned int count = 0;
-<<<<<<< HEAD
-	int x = 0, d = 0;
-	if (!b)
+	unsigned int x = 0;
+	unsigned int len;
+	int a;
+
+	len = strlen(b);
+
+	for (a = len - 1; a >= 0; a--)
 	{
-		return (0);
-	}
-	for (int i = 0; b[i]; ++i) 
-	{
-		if (b[i] != '0' && b[i] != '1')
-		{
+		if (b[a] != '0' && b[a] != '1')
 			return (0);
-		}
-	}
-	for (int i = strlen(b) - 1; i >= 0; --i) 
-	{
-		if (b[i] == '1') 
+		if (b[a] == '1')
 		{
-			count += x;
+			x += count;
 		}
-		x *= 2;
-=======
-	int j = 0;
-
-	if (b == NULL || *b == '\0')
-	{
-		return (0);
->>>>>>> 1f35db5 (convert num)
+		count *= 2;
 	}
-	while (b[j] != '\0')
-	{
-		if (b[j] != '0' && b[j] != '1')
-		{
-			return (0);
-		}
-	count = (count << 1) | (b[j] - '0');
-
-	j++;
-
-	}
-
-	return (count);
+	return (x);
 }
