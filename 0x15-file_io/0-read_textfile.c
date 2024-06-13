@@ -1,9 +1,9 @@
 #include "main.h"
 /**
- * read_textfile - read a text file and prints it to the posix std io
+ * read_textfile - read a text file and prints it to the posix stdio
  * @letters: number of letters it should read and print
  * @filename: name of file
- *
+ * Return: 1 on success else -1
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
