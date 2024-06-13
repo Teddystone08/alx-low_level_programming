@@ -1,7 +1,7 @@
 # include "dog.h"
 /**
  * init_dog - function that initialize a type struct dog
- * @d: passing string from user
+ * @d: passing string 
  * @name: identity of the dog
  * @age: years of the dog
  * @owner: owner of the dog

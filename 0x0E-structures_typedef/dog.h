@@ -8,6 +8,7 @@
  * @name: identity of dog
  * @age: years of the dog
  * @owner: owner of the dog
+ * @d: passing string 
 **/
 struct dog
 {
@@ -16,9 +17,6 @@ struct dog
 	char *owner;
 };
 
-/**
- * dog_t - Typedef for struct dag
- **/
 void init_dog(struct dog *d, char *name, float age, char *owner);
 
 #endif /*DOG_H*/
