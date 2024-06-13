@@ -8,7 +8,6 @@
  * @name: identity of dog
  * @age: years of the dog
  * @owner: owner of the dog
- * @d: passing string
  */
 struct dog
 {
@@ -16,6 +15,13 @@ struct dog
 	float age;
 	char *owner;
 };
+/**
+ * init_dog - function for dog
+ * @d: pressed string
+ * @name: identity of dog
+ * @age: years of the dog
+ * @owner: owner of the dog
+ *
+ */
 void init_dog(struct dog *d, char *name, float age, char *owner);
-
 #endif /*DOG_H*/
